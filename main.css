@@ -1,0 +1,14 @@
+.score{
+    display: flex;
+}
+
+#score{
+    margin-left: 10px;
+
+}
+
+/* #canvas{
+    background-image:url('IMG_1029.jpg');
+    background-size:cover;
+    background-position: center center;
+} */
