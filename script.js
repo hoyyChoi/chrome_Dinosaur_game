@@ -67,13 +67,19 @@ class Background {
     }
 }
 
-let cactus1 = new Image();
-let cactus2 = new Image();
-let cactus3 = new Image();
-cactus1.src = 'cactus1.jpg';
-cactus2.src = 'cactus2.jpg';
-cactus3.src = 'cactus3.jpg';
-const imgArray = [cactus1,cactus2,cactus3];
+let G= new Image();
+let D = new Image();
+let S = new Image();
+let C = new Image();
+let gdsc = new Image();
+G.src = 'G.jpg';
+D.src = 'D.jpg';
+S.src = 'S.jpg';
+C.src = 'C.jpg';
+gdsc.src = 'gdsclogo.png'
+const imgArray = [G,D,S,C,gdsc];
+
+
 
 class Cactus {  //각각 다른 특성을 띄기때문에 클래스로 선언
     constructor(num,size){
@@ -95,7 +101,7 @@ let timer = 0;
 let backgroundArray =[]
 
 let cactusAll = [];
-let sizeArray = [30,50,80];
+let sizeArray = [80,80,80,80,100];
 
 let jump = false;
 let jumpTimer = 0;
@@ -125,7 +131,7 @@ const SecondFrame = ()=>{  // 프레임 코드
 
 
     if(timer % 150 === 0){
-        let num = Math.floor(Math.random() * 3);
+        let num = Math.floor(Math.random() * 5);
         let size = sizeArray[num]
         let cactus = new Cactus(num,size);
         cactusAll.push(cactus)
@@ -136,7 +142,7 @@ const SecondFrame = ()=>{  // 프레임 코드
             o.splice(idx,1)
         }
         cactus.x -= 10;
-        collision(dino,cactus); // 여기 안에서 충돌체크 해야함. 왜냐, 실시간으로 충돌하는지 알아야하므로, 반복문안에 넣는다. ex) 장애물이 100개가 있으면 공룡이랑 장애물이랑 실시간으로 충돌하는지 계속 확인해야하므로
+        //collision(dino,cactus); // 여기 안에서 충돌체크 해야함. 왜냐, 실시간으로 충돌하는지 알아야하므로, 반복문안에 넣는다. ex) 장애물이 100개가 있으면 공룡이랑 장애물이랑 실시간으로 충돌하는지 계속 확인해야하므로
         //반복문이 1초에 60번씩 진행되기 때문에 사실 계속 지워지면서 그려진다. (이동과 동시에)
         cactus.draw()
     })
