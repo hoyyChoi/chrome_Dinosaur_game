@@ -1,5 +1,13 @@
+.option{
+   
+    justify-content: space-between;
+    margin-left: 50px;
+    opacity: 0;
+}
+
 .score{
     display: flex;
+    
 }
 
 #score{
@@ -7,8 +15,13 @@
 
 }
 
-/* #canvas{
-    background-image:url('IMG_1029.jpg');
-    background-size:cover;
-    background-position: center center;
-} */
+.description{
+    display: flex;
+    justify-content: center;
+}
+
+#canvas{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
